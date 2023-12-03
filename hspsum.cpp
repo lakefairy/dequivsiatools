@@ -150,12 +150,9 @@ off_t search_dpmx(FILE * fp, size_t filesize)
 
 off_t search_hsphed(FILE * fp, size_t filesize, uint32_t offset_to_dpm)
 {
-    char pattern[32];
-    sprintf(pattern, "%d", offset_to_dpm - 0x10000);
-    size_t pattern_size = strlen(pattern);
-
     rewind(fp);
-    return file_search_bin(fp, pattern, pattern_size);
+    off_t res = file_search_bin(fp, "\x18\x23\x20\x18\x15\x14\x4e\x4e", 8);
+    return res != -1 ? res + 9 + 8 : -1;
 }
 
 void printUsage (const char * cmd)
@@ -173,11 +170,15 @@ int main(int argc, char * argv[])
 {
     bool verbose = false;
     bool fix_checksum = false;
+    bool fix_offset = false;
 
     int argi = 1;
     while (argi < argc && argv[argi][0] == '-') {
         if (strcmp(argv[argi], "-f") == 0) {
             fix_checksum = true;
+        }
+        else if (strcmp(argv[argi], "-o") == 0) {
+            fix_offset = true;
         }
         else if (strcmp(argv[argi], "-v") == 0 || strcmp(argv[argi], "--verbose") == 0) {
             verbose = true;
@@ -306,6 +307,26 @@ int main(int argc, char * argv[])
 
             fclose(fp);
         }
+    }
+    if (fix_offset) {
+        FILE *fp = fopen(filename, "r+b");
+        if (fp == NULL) {
+            printf("Error: Unable to open \"%s\"\n", filename);
+            return EXIT_FAILURE;
+        }
+
+        char buf[8] = {0};
+        snprintf(buf, 8, "%d", offset_to_dpm-0x10000);
+        if (fseek(fp, offset_to_hsphed, SEEK_SET) != 0) {
+            printf("Error: fseek failed \"%s\"\n", filename);
+            fclose(fp);
+            return EXIT_FAILURE;
+        }
+
+        fwrite(buf, 8, 1, fp);
+        printf("Offset updated\n");
+
+        fclose(fp);
     }
 
     return EXIT_SUCCESS;
