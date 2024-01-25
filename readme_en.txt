@@ -1,0 +1,72 @@
+
+
+
+		DEQUIVSIA
+
+
+
+Maze
+
+
+*How to run
+
+	Please execute dequivsia.exe.
+
+
+*Controls
+
+	Menu Screen
+		Cursor keys		Move
+		Z				Confirm
+		X				Cancel
+		R				??? (Used in stage select screen)
+
+	Gameplay Screen
+		Cursor keys		Move
+		X				Open menu
+		A				Guess hole locations
+
+*Explanation
+
+	Gather the scattered keys and head to the goal.
+	If you fall into a hole for three times, the game is over.
+
+	The erosion degree of a room indicates the number of holes
+	in all eight adjecent rooms.
+
+	Hold A and use the cursor keys to guess the hole locations.
+	By releasing A, the block selected with the cursor will be
+	checked.
+
+
+	If you feel the game boots slowly
+	└Please move the files called "100" from the "data" folder
+	 to the savedata folder.
+	 You'll avoid loading the music and be able to boot.
+
+*Staff
+
+	Nishikigatsuo ニシキガツオ
+	http://kohada.ushimairi.com/index.html
+
+	Design, Ending	Hon Kohada Salmon 本こはだサーモン
+	Programming		rakugan65535
+	Graphics		KoumoriEQ こうもりEQ
+	Sound			Speder2
+
+
+*Caution
+	There are several flashing lights. People with photosensitive epilepsy should beware.
+	The author does not bear responsibility of any damages resulting from the use of this
+	software. Please be understanding.
+	The music and sound effects used in this game shall be considered freely usable material,
+	to be used as you like under certain conditions.
+	No commercial usage allowed. Free to use in remixing. Copyright declaration optional.
+	We don't mind if you don't include a copyright declaration. In case you do, please
+	fill it out as "DEQUIVSIA" or the character string "ニシキガツオ".
+
+
+*Version
+
+	1.01	2015/04/04	-	Extra elements added, music and sound effects added.
+	1.00	2014/10/05	-	DEQUIVSIA completed, available to public.
