@@ -16,13 +16,13 @@ Maze
 *Controls
 
 	Menu Screen
-		Cursor keys		Move
+		Cursor keys			Move
 		Z				Confirm
 		X				Cancel
 		R				??? (Used in stage select screen)
 
 	Gameplay Screen
-		Cursor keys		Move
+		Cursor keys			Move
 		X				Open menu
 		A				Guess hole locations
 
@@ -31,27 +31,26 @@ Maze
 	Gather the scattered keys and head to the goal.
 	If you fall into a hole for three times, the game is over.
 
-	The erosion degree of a room indicates the number of holes
-	in all eight adjecent rooms.
+	The erosion degree of a room indicates the number of hole
+	rooms adjacted to the room.
 
 	Hold A and use the cursor keys to guess the hole locations.
-	By releasing A, the block selected with the cursor will be
-	checked.
+	By releasing A, the selected room will be checked.
 
 
 	If you feel the game boots slowly
-	└Please move the files called "100" from the "data" folder
+	└Please move the "100" file from the "data" folder
 	 to the savedata folder.
 	 You'll avoid loading the music and be able to boot.
 
 *Staff
 
-	Nishikigatsuo ニシキガツオ
+	Nishikigatsuo (ニシキガツオ)
 	http://kohada.ushimairi.com/index.html
 
-	Design, Ending	Hon Kohada Salmon 本こはだサーモン
+	Design, Ending		Hon Kohada Salmon (本こはだサーモン)
 	Programming		rakugan65535
-	Graphics		KoumoriEQ こうもりEQ
+	Graphics		KoumoriEQ (こうもりEQ)
 	Sound			Speder2
 
 
@@ -70,3 +69,8 @@ Maze
 
 	1.01	2015/04/04	-	Extra elements added, music and sound effects added.
 	1.00	2014/10/05	-	DEQUIVSIA completed, available to public.
+
+
+*Translation
+
+	Translated by Lake Fairy Translations in 2024.
