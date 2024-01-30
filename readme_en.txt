@@ -29,12 +29,12 @@ Maze
 *Explanation
 
 	Gather the scattered keys and head to the goal.
-	If you fall into a hole for three times, the game is over.
+	If you fall into a hole three times, the game is over.
 
 	The erosion degree of a room indicates the number of hole
-	rooms adjacted to the room.
+	rooms adjacent to the room.
 
-	Hold A and use the cursor keys to guess the hole locations.
+	Hold A and use the cursor keys to guess hole locations.
 	By releasing A, the selected room will be checked.
 
 
