@@ -1,9 +1,9 @@
 .POSIX:
 .PHONY: all clean checksum getupx 
 UPX=./upx
-all: dequivsia.zip
+all: dequivsia-en.zip dequivsia-en-patch.zip
 clean:
-	$(RM) hspsum $(DIST_TARGET) dequivsia.unupx.exe dequivsia/data/savedata/.dummy dequivsia/readme_en.txt
+	$(RM) hspsum $(DIST_TARGET) dequivsia.unupx.exe dequivsia/data/savedata/.dummy dequivsia-en.zip dequivsia-en-patch.zip
 checksum:
 	sha256sum -c <dequivsia.sha256
 getupx:
@@ -108,6 +108,9 @@ DIST_BASE = \
 	dequivsia/dsoundex.hpi \
 	dequivsia/readme.txt
 
-dequivsia.zip: $(DIST_BASE) dequivsia/data/savedata/.dummy $(DIST_TARGET)
-	-$(RM) dequivsia.zip
-	zip -9X dequivsia.zip $(DIST_BASE) dequivsia/data/savedata $(DIST_TARGET)
+dequivsia-en.zip: $(DIST_BASE) dequivsia/data/savedata/.dummy $(DIST_TARGET)
+	-$(RM) dequivsia-en.zip
+	zip -9X dequivsia-en.zip $(DIST_BASE) dequivsia/data/savedata $(DIST_TARGET)
+dequivsia-en-patch.zip: $(DIST_TARGET)
+	-$(RM) dequivsia-en-patch.zip
+	zip -9Xj dequivsia-en-patch.zip $(DIST_TARGET)
