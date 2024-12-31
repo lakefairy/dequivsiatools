@@ -10,7 +10,7 @@ Maze
 
 *How to run
 
-        Please execute dequivsia.exe.
+        Please execute dequivsia.en.exe.
 
 
 *Controls
@@ -35,7 +35,7 @@ Maze
         rooms adjacent to the room.
 
         Hold A and use the cursor keys to guess hole locations.
-        By releasing A, the selected room will be checked.
+        By releasing A, the selected room will be marked.
 
 
         If you feel the game boots slowly
@@ -73,4 +73,17 @@ Maze
 
 *Translation
 
+        Dequivsia English Translation, Release 1
+
         Translated by Lake Fairy Translations in 2024.
+        <https://lakefairy.github.io/>
+
+        If you're playing on a large monitor, you may want to try running
+        dequivsia.en.15x.exe instead of dequivsia.en.exe. The 15x version
+        lets you increase the scale factor up to 15x. Note that the scale
+        selector isn't displayed correctly when set to 4x or more.
+
+        Patching                Egor
+        Translation, Graphics   Pooka
+
+        Non-commercial redistribution is allowed.
